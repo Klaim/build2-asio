@@ -6,13 +6,13 @@ lib{asio}: include/{hxx ixx txx}{**} $impl_libs $intf_libs
 
 # Build options.
 #
-cxx.poptions =+ "$out_base/include/" "$src_base/include/"
+cxx.poptions =+ "-I$out_base/include/" "-I$src_base/include/"
 
 # Export options.
 #
 lib{asio}:
 {
-  cxx.export.poptions = "$out_base/include/" "$src_base/include/"
+  cxx.export.poptions = "-I$out_base/include/" "-I$src_base/include/"
   cxx.export.libs = $intf_libs
 }
 
